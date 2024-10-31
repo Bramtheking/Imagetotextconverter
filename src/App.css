@@ -5,19 +5,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  justify-self: center;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+  background: #ffffff; /* Lighter blue solid color */
   min-height: 100vh;
   color: #1a1a1a;
   line-height: 1.5;
 }
 
 .app-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Changed to 100% */
   padding: 2rem;
 }
 
@@ -283,6 +283,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 /* Dark Theme Styles */
 .app-container.dark {
   background-color: #1a202c;
