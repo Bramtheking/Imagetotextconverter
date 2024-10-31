@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+  min-height: 100vh;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Main Content */
+.main-content {
+  margin-bottom: 4rem;
+}
+
+.converter-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  border: 2px dashed #3b82f6;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+.upload-label:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Error Message */
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Image Preview */
+.image-preview {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.clear-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.clear-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  height: 0.5rem;
+  background: #e2e8f0;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+/* Convert Button */
+.convert-button {
+  width: 100%;
+  padding: 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.convert-button:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.convert-button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.convert-button.loading {
+  position: relative;
+}
+
+/* Output Section */
+.output-section {
+  margin-top: 2rem;
+}
+
+.output-textarea {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  flex: 1;
+  padding: 0.75rem;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background: #e2e8f0;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #1a365d;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #4a5568;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #3b82f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Dark Theme Styles */
+.app-container.dark {
+  background-color: #1a202c;
+  color: #f8fafc;
+}
+
+.app-container.dark .navbar,
+.app-container.dark .converter-card,
+.app-container.dark .feature-card {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.app-container.dark .convert-button {
+  background-color: #4a5568;
+}
+
+.app-container.dark .convert-button:hover {
+  background-color: #2c5282;
+}
+
+/* Any other dark theme specific styles go here */
